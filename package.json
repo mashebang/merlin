@@ -1,0 +1,11 @@
+{
+  "name": "merlin",
+  "version": "1.0.0",
+  "description": "create files using cli",
+  "main": "merlin.js",
+  "author": "netoguimaraes <joao.neto.guimaraes@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.15.1"
+  }
+}
