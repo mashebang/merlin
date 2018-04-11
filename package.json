@@ -5,6 +5,9 @@
   "main": "merlin.js",
   "author": "netoguimaraes <joao.neto.guimaraes@gmail.com>",
   "license": "MIT",
+  "bin": {
+    "merlin-engine": "./merlin.js"
+  },
   "dependencies": {
     "commander": "^2.15.1"
   }
