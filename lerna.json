@@ -1,7 +1,14 @@
 {
-  "lerna": "2.10.1",
-  "packages": [
-    "packages/*"
-  ],
-  "version": "independent"
+    "lerna": "2.10.1",
+    "packages": [
+        "packages/*"
+    ],
+    "command": {
+        "publish": {
+            "message": "(release): publish %s"
+
+        }
+
+    },
+    "version": "independent"
 }
