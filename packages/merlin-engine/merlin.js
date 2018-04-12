@@ -2,7 +2,7 @@
 const path = require('path');
 const fs = require("fs");
 
-export function create(cmd) {
+function create(cmd) {
   const values = cmd.values || {};
   const output = cmd.output || 'output';
   const templatePath = cmd.template || '';
@@ -74,3 +74,5 @@ program
   .action(create);
 
 program.parse(process.argv);
+
+exports.create = create;
