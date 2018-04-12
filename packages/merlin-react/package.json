@@ -12,5 +12,8 @@
     "generator"
   ],
   "author": "Neto Guimarães",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "merlin-engine": "^1.2.5"
+  }
 }

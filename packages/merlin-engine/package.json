@@ -1,6 +1,6 @@
 {
   "name": "merlin-engine",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Merlin is a generical file creator that uses templates and JSON data to generate dynamic files.",
   "main": "merlin.js",
   "author": "netoguimaraes <joao.neto.guimaraes@gmail.com>",
