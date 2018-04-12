@@ -2,7 +2,7 @@
 const path = require('path');
 const fs = require("fs");
 
-function createCallback(cmd) {
+export function create(cmd) {
   const values = cmd.values || {};
   const output = cmd.output || 'output';
   const templatePath = cmd.template || '';
@@ -68,6 +68,6 @@ program
   .option('--values <values>', 'values to fill the template')
   .option('--output <template>', 'path to the output file')
   .option('--template <template>', 'path to the template file')
-  .action(createCallback);
+  .action(create);
 
 program.parse(process.argv);
