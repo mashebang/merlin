@@ -5,19 +5,17 @@ const fs = require("fs");
 function createCallback(cmd) {
   const values = cmd.values || {};
   const output = cmd.output || 'output';
-  const template = cmd.template || '';
-  const templatePath = path.resolve(__dirname, template);
+  const templatePath = cmd.template || '';
   const file = fs.readFile(templatePath, "utf8", function (err, data) {
     if (err) {
       console.log(`Error reading ${templatePath}. check the file`);
       return;
     }
-    const fullPath = path.resolve(__dirname, output);
     const contentArray = data.split('\n');
     const replacedTemplate = replaceTemplate(contentArray, JSON.parse(values));
 
     replacedTemplate.forEach(line => {
-      fs.appendFileSync(fullPath, line.concat('\n'), (err, data) => console.log(err, data));
+      fs.appendFileSync(output, line.concat('\n'), (err, data) => console.log(err, data));
     });
   });
 }
