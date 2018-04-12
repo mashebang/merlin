@@ -46,15 +46,18 @@ function replaceTemplate(file, templateValues) {
   let content = file;
   const keys = Object.keys(templateValues);
   const shouldEvaluate = evaluateGuard(content, keys);
-  keys.forEach(key => {
-    content = content.map(line => {
-      const template = '`' + line + '`';
-      
-      with(templateValues) {
-        return eval(template);
-      }
+  if (shouldEvaluate) {
+    keys.forEach(key => {
+      content = content.map(line => {
+        const template = '`' + line + '`';
+        with(templateValues) {
+          return eval(template);
+        }
+      });
     });
-  });
+  } else {
+    console.error("Missing values to fill the template. Check the values and what the template is asking for.")
+  }
 
   return content;
 }
