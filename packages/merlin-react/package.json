@@ -14,6 +14,7 @@
   "author": "Neto Guimarães",
   "license": "MIT",
   "dependencies": {
-    "merlin-engine": "^1.2.4"
+    "commander": "^2.15.1",
+    "merlin-engine": "^1.2.5"
   }
 }

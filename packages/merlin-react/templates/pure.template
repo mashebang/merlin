@@ -1,0 +1,12 @@
+import React from 'react';
+
+class ${name} extends React.PureComponent {
+  ${state}
+  render() {
+    return (
+      <div></div>
+    );
+  }
+}
+
+export default ${name};
