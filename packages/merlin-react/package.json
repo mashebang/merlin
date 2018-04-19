@@ -1,6 +1,6 @@
 {
   "name": "merlin-react",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "react component scafolding tool",
   "main": "merlin-react.js",
   "scripts": {
@@ -15,6 +15,6 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^2.15.1",
-    "merlin-engine": "^1.2.7"
+    "merlin-engine": "^1.2.8"
   }
 }
