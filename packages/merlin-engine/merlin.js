@@ -15,7 +15,7 @@ function create(cmd) {
     const replacedTemplate = replaceTemplate(contentArray, JSON.parse(values));
 
     replacedTemplate.forEach(line => {
-      fs.writeFileSync(output, line.concat('\n'), (err, data) => console.log(err, data));
+      fs.appendFileSync(output, line.concat('\n'), (err, data) => console.log(err, data));
     });
   });
 }
