@@ -6,7 +6,7 @@ const PURE = 'pure';
 
 // merlin component Header --type class --state '{ neto: '', bora: false }'
 
-export function componentCreate(cmd, options) {
+function componentCreate(cmd, options) {
   const componentName = cmd;
   const type = options.type || STATELESS;
   const state = options.state || null;
@@ -51,3 +51,5 @@ program
   .action(componentCreate);
 
 program.parse(process.argv);
+
+exports.createComponent = componentCreate;
